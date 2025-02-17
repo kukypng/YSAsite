@@ -144,7 +144,7 @@ function confirmarPedido() {
     mensagem += `Endereço: ${metodoEntrega === 'retirada' ? 'Retirada no local' : endereco}\n`;
     mensagem += `Forma de Pagamento: ${pagamento}*\n`;
   mensagem += `Obrigado pela preferencia 😊\n `;
-  mensagem += `> _Afiliado1_ `;
+  mensagem += `> _Afiliado1_`;
     if (pagamento === 'dinheiro') {
         mensagem += `Troco para: R$ ${troco},00\n`;
     }

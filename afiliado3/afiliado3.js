@@ -155,5 +155,5 @@ function confirmarPedido() {
 }
 
 function redirecionar() {
-    window.location.href = "afiliado1.html"; // Substitua pelo URL desejado
+    window.location.href = "afiliado2.html"; // Substitua pelo URL desejado
 }
