@@ -143,11 +143,12 @@ function confirmarPedido() {
     mensagem += `*Total: R$ ${totalComEntrega},00*\n`;
     mensagem += `Endereço: ${metodoEntrega === 'retirada' ? 'Retirada no local' : endereco}\n`;
     mensagem += `Forma de Pagamento: ${pagamento}*\n`;
-    
+
+  
     if (pagamento === 'dinheiro') {
         mensagem += `Troco para: R$ ${troco},00\n`;
-        mensagem += `>_Cantinho Da Ysa_\n`;
-        mensagem += `Obrigado pela preferencia 😊\n `;
+        mensagem += `_Afiliado3_\n`;
+        mensagem += `Obrigado pela preferencia 😊\n`;
     }
 
     if (confirm('Deseja confirmar o pedido?')) {
