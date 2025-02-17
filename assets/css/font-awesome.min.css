@@ -70,7 +70,7 @@
 
 .fa-border {
 	padding: .2em .25em .15em;
-	border: solid .08em #eee;
+	border: solid .08em #db5275;
 	border-radius: .1em
 }
 
@@ -209,7 +209,7 @@
 }
 
 .fa-inverse {
-	color: #fff
+	color: #db5275
 }
 
 .fa-glass:before {
