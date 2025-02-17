@@ -133,7 +133,7 @@ function confirmarPedido() {
         }
     }
 
-    let mensagem = 'Seu pedido:\n \n';
+    let mensagem = 'Parceiro: Parceiro2\n \n';
     carrinho.forEach(item => {
         mensagem += `${item.nome} - R$ ${item.preco},00\n`;
     });
@@ -143,11 +143,9 @@ function confirmarPedido() {
     mensagem += `*Total: R$ ${totalComEntrega},00*\n`;
     mensagem += `Endereço: ${metodoEntrega === 'retirada' ? 'Retirada no local' : endereco}\n`;
     mensagem += `Forma de Pagamento: ${pagamento}*\n`;
-  mensagem += `Obrigado pela preferencia 😊\n `;
   
     if (pagamento === 'dinheiro') {
         mensagem += `Troco para: R$ ${troco},00\n`;
-        mensagem += `> _Afiliado2_\n`;
     }
 
     if (confirm('Deseja confirmar o pedido?')) {
@@ -156,5 +154,5 @@ function confirmarPedido() {
 }
 
 function redirecionar() {
-    window.location.href = "afiliado2.html"; // Substitua pelo URL desejado
+    window.location.href = "parceiro1.html"; // Substitua pelo URL desejado
 }
