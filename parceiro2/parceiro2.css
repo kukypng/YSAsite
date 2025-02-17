@@ -6,8 +6,8 @@ body {
 }
 
 header {
-    background-color: #6a0dad;
-    color: white;
+    background-color: #ecbcc8;
+    color: #db5275;
     text-align: center;
     padding: 1rem;
 }
@@ -41,8 +41,8 @@ main {
 }
 
 button.btn, a.btn {
-    background-color: #6a0dad;
-    color: white;
+    background-color: #ecbcc8;
+    color: black;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -55,7 +55,7 @@ button.btn, a.btn {
 }
 
 button.btn:hover, a.btn:hover {
-    background-color: #4b0082;
+    background-color: #db5275;
 }
 
 a#voltar-menu {
@@ -71,7 +71,7 @@ a#voltar-menu {
 }
 
 footer {
-    background-color: #6a0dad;
+    background-color: #ecbcc8;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -102,7 +102,7 @@ input, select {
 
 button.btn-remover {
     background-color: #ff4d4d; /* Cor de fundo */
-    color: white; /* Cor do texto */
+    color: black; /* Cor do texto */
     border: none; /* Remover borda */
     padding: 0.5rem 1rem; /* Espaçamento interno */
     cursor: pointer; /* Cursor de ponteiro */
