@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function adicionarCarrinho(elemento) {
     const produto = elemento.parentElement;
     const nome = produto.getAttribute('data-nome');
-    const preco = parseInt(produto.getAttribute('data-preco'));
+    const preco = parseFloat(produto.getAttribute('data-preco'));
     carrinho.push({ nome, preco });
     atualizarCarrinho();
 }
@@ -20,7 +20,7 @@ function atualizarCarrinho() {
 
     carrinho.forEach((item, index) => {
         const li = document.createElement('li');
-        li.textContent = `${item.nome} - R$ ${item.preco},00`;
+        li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
 
         const removerButton = document.createElement('button');
         removerButton.textContent = 'Remover';
@@ -33,7 +33,7 @@ function atualizarCarrinho() {
     });
 
     const totalElement = document.getElementById('total');
-    totalElement.textContent = `Total: R$ ${total},00`;
+    totalElement.textContent = `Total: R$ ${total.toFixed(2)}`;
 
     // Atualizar o recibo em tempo real
     atualizarRecibo();
@@ -64,10 +64,10 @@ function atualizarRecibo() {
     detalhesRecibo.innerHTML = ''; // Limpa o conteúdo anterior
 
     carrinho.forEach((item, index) => {
-        detalhes += `${item.nome} - R$ ${item.preco},00\n`;
+        detalhes += `${item.nome} - R$ ${item.preco.toFixed(2)}\n`;
 
         const p = document.createElement('p');
-        p.textContent = `${item.nome} - R$ ${item.preco},00`;
+        p.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
 
         const removerButton = document.createElement('button');
         removerButton.textContent = 'Remover';
@@ -80,9 +80,9 @@ function atualizarRecibo() {
         p.appendChild(removerButton);
         detalhesRecibo.appendChild(p);
     });
-    detalhes += `\nSubtotal: R$ ${subtotal},00\n`;
-    detalhes += entrega === 0 ? 'Entrega: Grátis\n' : `Entrega: R$ ${entrega},00\n`;
-    detalhes += `Total: R$ ${totalComEntrega},00\n`;
+    detalhes += `\nSubtotal: R$ ${subtotal.toFixed(2)}\n`;
+    detalhes += entrega === 0 ? 'Entrega: Grátis\n' : `Entrega: R$ ${entrega.toFixed(2)}\n`;
+    detalhes += `Total: R$ ${totalComEntrega.toFixed(2)}\n`;
 
     const totalP = document.createElement('p');
     totalP.textContent = detalhes;
@@ -135,17 +135,17 @@ function confirmarPedido() {
 
     let mensagem = 'Seu pedido:\n \n';
     carrinho.forEach(item => {
-        mensagem += `${item.nome} - R$ ${item.preco},00\n`;
+        mensagem += `${item.nome} - R$ ${item.preco.toFixed(2)}\n`;
     });
-    mensagem += `\nSubtotal: R$ ${subtotal},00\n`;
+    mensagem += `\nSubtotal: R$ ${subtotal.toFixed(2)}\n`;
     mensagem += entrega === 0 ? 'Entrega: Grátis\n' : 
-    `Entrega: R$ ${entrega},00\n`;
-    mensagem += `*Total: R$ ${totalComEntrega},00*\n`;
+    `Entrega: R$ ${entrega.toFixed(2)}\n`;
+    mensagem += `*Total: R$ ${totalComEntrega.toFixed(2)}*\n`;
     mensagem += `Endereço: ${metodoEntrega === 'retirada' ? 'Retirada no local' : endereco}\n`;
     mensagem += `Forma de Pagamento: ${pagamento}*\n`;
   
     if (pagamento === 'dinheiro') {
-        mensagem += `Troco para: R$ ${troco},00\n`;
+        mensagem += `Troco para: R$ ${troco.toFixed(2)}\n`;
         mensagem += `_Cantinho Da Ysa_\n`;
     }
 
