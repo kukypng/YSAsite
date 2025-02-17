@@ -133,7 +133,7 @@ function confirmarPedido() {
         }
     }
 
-    let mensagem = 'Meu pedido:\n \n';
+    let mensagem = 'Parceiro: Cantinho Da Ysa\n \n';
     carrinho.forEach(item => {
         mensagem += `${item.nome} - R$ ${item.preco},00\n`;
     });
@@ -146,8 +146,6 @@ function confirmarPedido() {
   
     if (pagamento === 'dinheiro') {
         mensagem += `Troco para: R$ ${troco},00\n`;
-        mensagem += `_Cantinho Da Ysa_\n`;
-        mensagem += `Obrigado pela preferencia 😊\n `;
     }
 
     if (confirm('Deseja confirmar o pedido?')) {
