@@ -147,7 +147,7 @@ function confirmarPedido() {
   
     if (pagamento === 'dinheiro') {
         mensagem += `Troco para: R$ ${troco},00\n`;
-        mensagem += `> _Cantinho Da Ysa_\n`;
+        mensagem += `> _Afiliado1_\n`;
     }
 
     if (confirm('Deseja confirmar o pedido?')) {
