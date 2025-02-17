@@ -102,7 +102,7 @@ input, select {
 
 button.btn-remover {
     background-color: #ff4d4d; /* Cor de fundo */
-    color: white; /* Cor do texto */
+    color: black; /* Cor do texto */
     border: none; /* Remover borda */
     padding: 0.5rem 1rem; /* Espaçamento interno */
     cursor: pointer; /* Cursor de ponteiro */
