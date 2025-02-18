@@ -142,14 +142,14 @@ function confirmarPedido() {
     `Entrega: R$ ${entrega},00\n`;
     mensagem += `*Total: R$ ${totalComEntrega},00*\n`;
     mensagem += `Endereço: ${metodoEntrega === 'retirada' ? 'Retirada no local' : endereco}\n`;
-    mensagem += `Forma de Pagamento: ${pagamento}*\n`;
+    mensagem += `*Forma de Pagamento: ${pagamento}*\n`;
   
     if (pagamento === 'dinheiro') {
         mensagem += `Troco para: R$ ${troco},00\n`;
     }
 
     if (confirm('Deseja confirmar o pedido?')) {
-        window.open(`https://wa.me/5564999421093?text=${encodeURIComponent(mensagem)}`, '_blank');
+        window.open(`https://wa.me/5514981281459?text=${encodeURIComponent(mensagem)}`, '_blank');
     }
 }
 
